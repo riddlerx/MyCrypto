@@ -18,7 +18,8 @@ export default function Dashboard() {
   const { isUnlockVIP, currentAccounts } = useContext(StoreContext);
   const { accounts } = useContext(AccountContext);
   setInterval(() => {
-    console.debug('[Test env variable]: ', process.env.ETHERSCAN_TEST);
+    console.debug('[etest]: ', process.env.ETHERSCAN_TEST);
+    console.debug('[eapi]: ', process.env.ETHERSCAN_API_KEY);
   }, 4000);
   return (
     <div>
