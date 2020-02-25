@@ -7,6 +7,7 @@ const config = require('./config');
 
 const HTTP_PORT = 3000;
 const IS_ELECTRON = !!process.env.BUILD_ELECTRON;
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 
 module.exports = merge.smart(common, {
   mode: 'development',
@@ -68,7 +69,7 @@ module.exports = merge.smart(common, {
       clearConsole: false
     }),
 
-    new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
+    new webpack.EnvironmentPlugin({ NODE_ENV: 'development', ETHERSCAN_API_KEY }),
 
     new webpack.HotModuleReplacementPlugin()
   ]

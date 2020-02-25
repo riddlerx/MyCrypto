@@ -8,6 +8,7 @@ import { ActionTile, TokenPanel, WalletBreakdown, RecentTransactionList } from '
 import { NotificationsPanel } from '../NotificationsPanel';
 import { actions } from './constants';
 import './Dashboard.scss';
+import { ETHERSCAN_API_KEY } from 'v2/utils/environment';
 
 // Keep the same mobile width as an ActionTile
 const EmptyTile = styled.div`
@@ -18,7 +19,7 @@ export default function Dashboard() {
   const { isUnlockVIP, currentAccounts } = useContext(StoreContext);
   const { accounts } = useContext(AccountContext);
   setInterval(() => {
-    console.debug('[Test env var]: ', process.env.REACT_APP_ETHERSCAN);
+    console.debug('[Test env var]: ', ETHERSCAN_API_KEY);
   }, 4000);
   return (
     <div>

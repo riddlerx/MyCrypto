@@ -6,6 +6,8 @@ const electronMain = require('./electron-main.development');
 const electronRender = require('./production');
 const config = require('./config');
 
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+
 const main = merge.smart(electronMain, {
   mode: 'production',
   devtool: 'none',
@@ -44,7 +46,8 @@ const render = merge.smart(electronRender, {
 
     new webpack.EnvironmentPlugin({
       'BUILD_DOWNLOADABLE': 'true',
-      'BUILD_ELECTRON': 'true'
+      'BUILD_ELECTRON': 'true',
+      ETHERSCAN_API_KEY
     })
   ]
 });

@@ -4,6 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const config = require('./config');
 
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+
 module.exports = {
   target: 'electron-main',
   mode: 'development',
@@ -114,7 +116,8 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new webpack.EnvironmentPlugin({
-      'NODE_ENV': 'development'
+      'NODE_ENV': 'development',
+      ETHERSCAN_API_KEY
     }),
 
     new ForkTsCheckerWebpackPlugin({
