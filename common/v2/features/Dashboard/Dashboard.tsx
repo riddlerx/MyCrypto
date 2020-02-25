@@ -19,7 +19,6 @@ export default function Dashboard() {
   const { accounts } = useContext(AccountContext);
   setInterval(() => {
     console.debug('[etest]: ', process.env.ETHERSCAN_TEST);
-    console.debug('[eapi]: ', process.env.ETHERSCAN_API_KEY);
   }, 4000);
   return (
     <div>
