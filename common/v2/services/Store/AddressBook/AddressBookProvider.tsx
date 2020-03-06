@@ -43,7 +43,7 @@ export const AddressBookProvider: React.FC = ({ children }) => {
     },
     getContactByAddressAndNetwork: (address, network) => {
       return addressBook
-        .filter((contact: ExtendedAddressBook) => contact.network === network.name)
+        .filter((contact: ExtendedAddressBook) => contact.network === network.id)
         .find(
           (contact: ExtendedAddressBook) => contact.address.toLowerCase() === address.toLowerCase()
         );
