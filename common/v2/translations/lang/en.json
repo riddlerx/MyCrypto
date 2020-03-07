@@ -607,6 +607,7 @@
     "NONCE_TOOLTIP": "The nonce is the number of transactions sent from a given address and its purpose is to prevent double spending. [Learn more about nonce.](https://support.mycrypto.com/general-knowledge/ethereum-blockchain/what-is-nonce)",
     "PLATFORMS": "Platforms:",
     "ZAP_NAME": "Zap Name:",
+    "SWAP_STEP1_TEXT": "Before swapping a token, you must activate the token. Sign an initial transaction to activate $token",
     "STEP_FINISHED": "Great Work!"
   }
 }
